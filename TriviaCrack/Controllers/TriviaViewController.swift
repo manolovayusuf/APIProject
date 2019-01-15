@@ -25,12 +25,12 @@ class TriviaViewController: UIViewController {
         super.viewDidLoad()
         triviaTableView.delegate = self
         triviaTableView.dataSource = self
+        triviaSearchBar.delegate = self
         TriviaAPIClient.retrieveTriviaQuestions { (triviaQuestions, error) in
             if let error = error {
                 print("There's an \(error) error retrieving your data")
             } else if let triviaQuestions = triviaQuestions {
                 self.triviaQuestions = triviaQuestions
-//                dump(self.triviaQuestions)
             }
         }
     }
@@ -69,5 +69,17 @@ extension TriviaViewController: UITableViewDelegate {
 extension TriviaViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+        guard let searchText = searchBar.text?.lowercased() else { return }
+        if searchText == "" || searchText == " " {
+            TriviaAPIClient.retrieveTriviaQuestions { (triviaQuestions, error) in
+                if let error = error {
+                    print("There's an \(error) error retrieving your data")
+                } else if let triviaQuestions = triviaQuestions {
+                    self.triviaQuestions = triviaQuestions
+                }
+            }
+        } else {
+             triviaQuestions = triviaQuestions.filter { searchText == $0.category.lowercased() }
+        }
     }
 }

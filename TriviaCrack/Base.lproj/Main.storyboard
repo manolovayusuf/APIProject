@@ -52,6 +52,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="E4W-Xy-aLz" firstAttribute="top" secondItem="uvS-Kb-vbg" secondAttribute="bottom" constant="11" id="3Xk-I9-TKo"/>
                                                 <constraint firstItem="dGO-CS-LeJ" firstAttribute="leading" secondItem="FKb-Wj-dP5" secondAttribute="leadingMargin" id="3cA-I2-Wkh"/>
@@ -136,11 +137,12 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.29699377809999999" green="0.44314685879999999" blue="0.1152082327" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Bb2-Ms-BRG" firstAttribute="trailing" secondItem="8br-PT-Hel" secondAttribute="trailing" id="1tg-6F-kXw"/>
                             <constraint firstItem="pRM-YP-wQW" firstAttribute="top" secondItem="HO5-3V-CP7" secondAttribute="bottom" constant="22" id="3Ft-CB-tbV"/>
